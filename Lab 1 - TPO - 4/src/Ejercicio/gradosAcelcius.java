@@ -5,6 +5,8 @@
  */
 package Ejercicio;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Juan fua el Diego
@@ -99,6 +101,19 @@ public class gradosAcelcius extends javax.swing.JFrame {
 
     private void JBconvertirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBconvertirActionPerformed
         // TODO add your handling code here:
+        double grados=0;
+        try{
+            if (!JTFgrados.getText().equals(null)) {
+              grados = Double.valueOf(JTFgrados.getText());
+         double res;
+        res=grados * 9/5 +32;
+        JOptionPane.showMessageDialog(this, "Los Grados Celcius a Fahrenheit son: "+res);
+        JTFgrados.setText("");   
+            }
+        }catch(Exception e){
+        JOptionPane.showMessageDialog(this, "Ingrese un Valor");
+        JTFgrados.setText("");
+        }         
     }//GEN-LAST:event_JBconvertirActionPerformed
 
     /**
